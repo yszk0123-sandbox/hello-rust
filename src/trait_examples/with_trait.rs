@@ -5,7 +5,7 @@ struct Rectangle {
     height: f64,
 }
 
-trait HasArea {
+pub trait HasArea {
     fn area(&self) -> f64;
 }
 
@@ -15,11 +15,12 @@ impl HasArea for Rectangle {
     }
 }
 
-fn get_area<T: HasArea>(shape: T) -> f64 {
+pub fn get_area<T: HasArea>(shape: T) -> f64 {
     shape.area()
 }
 
-pub fn run() {
+#[test]
+fn call_area_test() {
     let rectangle = Rectangle {
         x: 0f64,
         y: 0f64,
