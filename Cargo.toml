@@ -1,10 +1,9 @@
 [package]
-
 name = "hello-rust"
-version = "0.0.1"
+version = "0.1.0"
 authors = ["yszk0123 <y0suzuki0123@gmail.com>"]
+edition = "2021"
 
 [[bin]]
-
 name = "hello-rust-bin"
 doc = false
