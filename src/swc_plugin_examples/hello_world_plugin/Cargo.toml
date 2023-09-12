@@ -1,0 +1,17 @@
+[package]
+name = "hello_world_plugin"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+serde = "1"
+swc_plugin = "*"
+
+[dev-dependencies]
+testing = "*"
+swc_ecmascript = { version = "*", features = ["parser"] }
+swc_ecma_transforms_testing = "0.65.0"
+swc_common = { version = "0.17.9", features = ["sourcemap"] }
